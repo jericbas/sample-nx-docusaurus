@@ -1,0 +1,12 @@
+{
+  "executors": {
+    "docusaurus": {
+      "implementation": "./src/executors/server/executor",
+      "schema": "./src/executors/server/schema.json",
+      "description": "server executor"
+    }
+  }
+}
+
+
+

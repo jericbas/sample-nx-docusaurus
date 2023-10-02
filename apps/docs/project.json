@@ -1,0 +1,36 @@
+{   "name": "docs",
+"$schema": "../../node_modules/nx/schemas/project-schema.json",
+"root": "apps/docs",
+    "sourceRoot": "apps/docs",
+    "projectType": "application",
+    "targets": {
+        
+        "startDocs": {
+            "executor": "@y/docusaurus:docusaurus",
+            "options": {
+                "siteDir": "apps/docs",
+                "command": "start",
+                "config": "docusaurus.config.js"
+            }
+        },
+        "buildDocs": {
+            "executor": "@y/docusaurus:docusaurus",
+            "options": {
+                "siteDir": "apps/docs",
+                "command": "build",
+                "config": "docusaurus.config.js",
+                "outputPath": "../../dist/apps/docs"
+            }
+        },
+        "startx": {
+            "executor": "nx:run-commands",
+            "cwd": "apps/docs",
+            "options": {
+                "command": "docusaurus start",
+                "siteDir": "apps/docs",
+                "config": "docusaurus.config.js"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "properties": {
+    "siteDir": {
+      "type": "string",
+      "description": "The directory where the Docusaurus project is located."
+    },
+    "command": {
+      "type": "string",
+      "description": "The Docusaurus command to run.",
+      "enum": [
+        "start",
+        "build",
+        "swizzle",
+        "deploy",
+        "serve",
+        "clear",
+        "write-translations",
+        "write-heading-ids"
+      ]
+    }
+  },
+  "required": [
+    "siteDir",
+    "command"
+  ]
+}
